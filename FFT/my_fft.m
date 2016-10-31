@@ -3,12 +3,13 @@ function [ Y ] = my_fft( X )
 %   Discrete Fourier Transform of Vector
     n = length(X);
     Y = zeros(1,n);
+    c = -2*1i*pi;
     for k=1:n
-        tmp = zeros(1,n);
+        summation = 0;
         for j=1:n
-            tmp(j) = X(j)*exp(-2*1i*pi*(j-1)*(k-1)/n);
+            summation = summation + X(j)*exp(c*(j-1)*(k-1)/n);
         end
-        Y(k) = sum(tmp);
+        Y(k) = summation;
     end
 end
 
