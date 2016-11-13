@@ -1,5 +1,4 @@
-% This dataset is taken from
-% Mira? G?ksu ?zt?rk
+% Mirac Goksu Ozturk
 % Cmpe 530 - k-means HW
 %
 %
